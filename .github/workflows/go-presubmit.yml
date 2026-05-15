@@ -86,7 +86,7 @@ jobs:
         with:
           go-version: ${{ env.GO_VERSION }}
       - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
+        uses: mxschmitt/action-tmate@c6f0481d0648e44da05d377e11809430c8685366 # v3.20
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
         timeout-minutes: 15
       - name: Test integration
@@ -114,7 +114,7 @@ jobs:
         env:
           IMAGE_NAME: quay.io/open-cluster-management/multicluster-controlplane:${{ steps.vars.outputs.label }}
       - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
+        uses: mxschmitt/action-tmate@c6f0481d0648e44da05d377e11809430c8685366 # v3.20
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
         timeout-minutes: 15
       - name: Run e2e test
